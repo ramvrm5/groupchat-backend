@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
         if (users.indexOf(data.username) > -1) {
             socket.emit('userExists', data.username + ' username is taken! Try some other username.');
         } else {
-            users.push(data);
+            users.push(data.username);
             socket.emit('userSet', { username: data.username });
         }
     });
