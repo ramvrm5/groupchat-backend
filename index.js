@@ -1,5 +1,5 @@
 const PORT = process.env.PORT || 3000;
-const INDEX = require('./index.html');
+//const INDEX = require('./index.html');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
