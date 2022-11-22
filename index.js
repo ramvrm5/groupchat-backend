@@ -8,13 +8,13 @@ const app = express();
 app.use(cors());
 const http = require('http');
 //const server = http.createServer(app);
-//const { Server } = require("socket.io");
+const { Server } = require("socket.io");
 
 const server = express()
     //.use((req, res) => res.sendFile(INDEX, { root: __dirname }))
     .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
-const io = socketIO(server);
+const io = new Server(server);
 
 
 //const io = new Server(server);
